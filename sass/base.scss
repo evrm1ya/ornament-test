@@ -16,3 +16,28 @@ div.ornament-app-container {
   margin: 0;
 }
 
+/* VENDOR PREFIXES */
+
+@mixin animationPrefixed($shorthand) {
+  -webkit-animation: $shorthand;
+  -moz-animation: $shorthand;
+  -ms-animation: $shorthand;
+  -o-animation: $shorthand;
+  animation: $shorthand;
+}
+
+@mixin transformPrefixed($transformation) {
+  -webkit-transform: $transformation;
+  -moz-transform: $transformation;
+  -ms-transform: $transformation;
+  -o-transform: $transformation;
+  transform: $transformation;
+}
+@mixin transformStylePrefixed($transformStyleProp) {
+  -webkit-transform-style: $transformStyleProp;
+  -moz-transform-style: $transformStyleProp;
+  -ms-transform-style: $transformStyleProp;
+  -o-transform-style: $transformStyleProp;
+  transform-style: $transformStyleProp;
+}
+

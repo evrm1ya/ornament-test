@@ -1,0 +1,108 @@
+
+@import './base.scss';
+
+/* ANIMATIONS */
+
+@-webkit-keyframes widenOddContainerLines {
+  50% { width: 200%; }
+}
+@-moz-keyframes widenOddContainerLines {
+  50% { width: 200%; }
+}
+@-ms-keyframes widenOddContainerLines {
+  50% { width: 200%; }
+}
+@-o-keyframes widenOddContainerLines {
+  50% { width: 200%; }
+}
+@keyframes widenOddContainerLines {
+  50% { width: 200%; }
+}
+
+@-webkit-keyframes shrinkEvenContainerLines {
+  50% { width: 1px; }
+}
+@-moz-keyframes shrinkEvenContainerLines {
+  50% { width: 1px; }
+}
+@-o-keyframes shrinkEvenContainerLines {
+  50% { width: 1px; }
+}
+@keyframes shrinkEvenContainerLines {
+  50% { width: 1px; }
+}
+
+@-webkit-keyframes rotateGear {
+  0% { 
+    @include transformPrefixed(rotateY(0deg) rotateZ(0deg)); 
+  }  
+  100% { 
+    @include transformPrefixed(rotateY(360deg) rotateZ(360deg));
+  }
+}
+@-moz-keyframes rotateGear {
+  0% { 
+    @include transformPrefixed(rotateY(0deg) rotateZ(0deg)); 
+  }  
+  100% { 
+    @include transformPrefixed(rotateY(360deg) rotateZ(360deg));
+  }
+}
+@-ms-keyframes rotateGear {
+  0% { 
+    @include transformPrefixed(rotateY(0deg) rotateZ(0deg)); 
+  }  
+  100% { 
+    @include transformPrefixed(rotateY(360deg) rotateZ(360deg));
+  }
+}
+@-o-keyframes rotateGear {
+  0% { 
+    @include transformPrefixed(rotateY(0deg) rotateZ(0deg)); 
+  }  
+  100% { 
+    @include transformPrefixed(rotateY(360deg) rotateZ(360deg));
+  }
+}
+
+@-webkit-keyframes wobble {
+  0% { 
+    @include transformPrefixed(rotateY(0deg) rotateX(0deg)); 
+  }  
+  100% { 
+    @include transformPrefixed(rotateY(360deg) rotateX(-360deg));
+  }
+}
+@-moz-keyframes wobble {
+  0% { 
+    @include transformPrefixed(rotateY(0deg) rotateX(0deg)); 
+  }  
+  100% { 
+    @include transformPrefixed(rotateY(360deg) rotateX(-360deg));
+  }
+}
+@-ms-keyframes wobble {
+  0% { 
+    @include transformPrefixed(rotateY(0deg) rotateX(0deg)); 
+  }  
+  100% { 
+    @include transformPrefixed(rotateY(360deg) rotateX(-360deg));
+  }
+}
+@-o-keyframes wobble {
+  0% { 
+    @include transformPrefixed(rotateY(0deg) rotateX(0deg)); 
+  }  
+  100% { 
+    @include transformPrefixed(rotateY(360deg) rotateX(-360deg));
+  }
+}
+@keyframes wobble {
+  0% { 
+    @include transformPrefixed(rotateY(0deg) rotateX(0deg)); 
+  }  
+  100% { 
+    @include transformPrefixed(rotateY(360deg) rotateX(-360deg));
+  }
+}
+
