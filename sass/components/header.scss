@@ -1,0 +1,54 @@
+
+@import '../base.scss';
+
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  h1 {
+    margin: 0;
+  }
+  .dropdown {
+    button {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 4px;
+      border: 1px solid transparent;
+      .glyphicon {
+        position: initial;
+      }
+      &:hover {
+        background-color: #fff;
+        border: 1px solid $mainAccentColorHex;
+        span {
+          color: $mainAccentColorHex;
+        }
+      }
+      &:active {
+        box-shadow: none;
+      }
+      &:focus {
+        background-color: #fff;
+        outline: none;
+      }
+      @media screen and (max-width: 680px) {
+        margin: 6px 0 0 0;
+      }
+    }
+    ul {
+      margin-top: 4px;
+      @include mainAccentBorderRGBA(1px, solid, 1);
+      box-shadow: 0 6px 12px rgba(6, 255, 114, .175);
+      @media screen and (max-width: 680px) {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+

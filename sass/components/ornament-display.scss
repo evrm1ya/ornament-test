@@ -1,0 +1,30 @@
+
+main {
+  & > div.row {
+    $displayHeight: 400px;
+    width: 100%;
+    height: $displayHeight;
+    margin: 0;
+    & > div {
+      background-color: lightblue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: $displayHeight;
+      .ornament {
+        $ornamentWidth: 300px;
+        width: $ornamentWidth;
+        height: $displayHeight;
+        .art-box {
+          width: $ornamentWidth;
+          height: 300px;
+        }
+        .btn-box {
+          width: $ornamentWidth;
+          height: 200px;
+        }
+      }
+    }
+  }
+}

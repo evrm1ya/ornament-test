@@ -1,0 +1,18 @@
+
+/* APP COLORS */
+
+$mainAccentColorHex: #06ff72;
+
+
+/* BORDERS */
+
+@mixin mainAccentBorderRGBA($width, $type, $opacity) {
+  border: $width $type rgba(6, 255, 114, $opacity);
+}
+
+/* GENERAL STYLES */
+
+div.ornament-app-container {
+  margin: 0;
+}
+
