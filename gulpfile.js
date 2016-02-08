@@ -98,6 +98,16 @@ gulp.task('serve', function() {
     }));
 });
 
+gulp.task('serve2', function() {
+  gulp.src('')
+    .pipe(server({
+      livereload: {
+        enable: false
+      },
+      open: false
+    }));
+});
+
 // SASSy-ness
 var sassquatch = gulp.watch('sass/**/*.scss', ['sass']);
 
@@ -115,3 +125,4 @@ gulp.task('sass', function () {
  
 // gulp in console
 gulp.task('default', ['build', 'serve', 'sass']);
+gulp.task('run', ['build', 'serve2']);

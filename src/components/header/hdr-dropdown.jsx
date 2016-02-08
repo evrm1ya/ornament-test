@@ -29,10 +29,10 @@ module.exports = React.createClass({
       <ul className="dropdown-menu dropdown-menu-right"
           style={(this.state.clicked) ? this.listStyles.showList : this.listStyles.hideList}
         >
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li><a href="#">Separated link</a></li>
+        <li><a href="#">Links</a></li>
+        <li><a href="#">Will</a></li>
+        <li><a href="#">Go</a></li>
+        <li><a href="#">Here</a></li>
       </ul>
     </div>
   },

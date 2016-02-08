@@ -1,4 +1,6 @@
 
+@import '../animations.scss';
+
 main {
   & > div.row {
     $displayHeight: 400px;
@@ -25,15 +27,67 @@ main {
           .line-container {
             position: absolute;
             display: inline-flex;
+            background-color: transparent;
             [class*='inner-div'] {
               width: 50%;
               height: 100%;
+              position: absolute;
+            }
+            &:nth-child(odd) div {
+              @include animationPrefixed(widenOddContainerLines 4s ease-in-out infinite);
+              &:first-child {
+                @include transformPrefixed(rotate(60deg));
+              }
+            }
+            &:nth-child(even) div {
+              @include animationPrefixed(shrinkEvenContainerLines 4s ease-in-out infinite);
+              &:first-child {
+                @include transformPrefixed(rotate(60deg));
+              }
             }
           }
         }
         .btn-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           width: $ornamentWidth;
-          height: 200px;
+          height: 100px;
+          div {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            a {
+              display: inline-flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              text-decoration: none;
+              color: #333;
+              width: 30px;
+              height: 30px;
+              border: 2px solid transparent;
+              border-radius: 50%;
+            }
+            &:hover {
+              a {
+                color: $mainAccentColorHex;
+                border: 2px solid $mainAccentColorHex;
+                @include transformStylePrefixed(preserve-3d);
+                @include transformPrefixed(perspective(200px));
+                @include animationPrefixed(wobble 4s infinite linear);
+                i {
+                  @include transformStylePrefixed(preserve-3d);
+                  @include transformPrefixed(perspective(200px));
+                  @include animationPrefixed(rotateGear 4s infinite linear);
+                }
+              }
+            }
+          }
         }
       }
     }

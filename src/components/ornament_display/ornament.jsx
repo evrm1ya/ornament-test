@@ -277,16 +277,17 @@ module.exports = React.createClass({
     return <div className='col-xs-6 col-md-4'>
       <div className='ornament'>
         <div className='art-box'>
-          {this.addText()}
           {this.generateLineContainers()}
         </div>
         <div className='btn-box'> 
-          <a 
-            onClick={this.handleClick} 
-            href='javascript:void(0);'
-            >
-            <i className='fa fa-cog'></i>
-          </a>
+          <div className='btn-wrapper'>
+            <a 
+              onClick={this.handleClick} 
+              href='javascript:void(0);'
+              >
+              <i className='fa fa-cog'></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -294,14 +295,6 @@ module.exports = React.createClass({
   handleClick: function() {
     var click = (this.state.click) ? false : true;
     this.setState({click: click});
-  },
-  addText: function() {
-    if(this.state.click) {
-      return 'true';
-    }
-    else {
-      return 'false';
-    }
   },
   generateLineContainers: function() {
     var lineContainers = [];

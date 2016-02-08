@@ -8,6 +8,7 @@
   align-items: center;
   margin: 0;
   padding: 20px;
+  border: none;
   h1 {
     margin: 0;
   }
@@ -46,6 +47,13 @@
       box-shadow: 0 6px 12px rgba(6, 255, 114, .175);
       @media screen and (max-width: 680px) {
         margin-top: 10px;
+      }
+      li {
+        background-color: #fff;
+        a:hover {
+          background-color: $mainAccentColorHex;
+          color: #fff;
+        }
       }
     }
   }
