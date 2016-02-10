@@ -148,8 +148,7 @@ var styleGenerator = {
     var evenWidths = this.getRandomEvenWidths();
     var oddWidths = this.getRandomOddWidths();
     var alternatingWidths = [];
-    var iterations = (this.config.evenEles > this.config.oddEles) ||
-      (this.config.evenEles === this.config.oddEles) ? this.config.evenEles : this.config.oddEles;
+    var iterations = (this.config.evenEles > this.config.oddEles) ? this.config.evenEles : this.config.oddEles;
       var pushWidths = function(iterations, counter) {
         if(iterations > 0) {
           if(evenWidths[counter])
