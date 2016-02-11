@@ -2,18 +2,6 @@
 var randomizer = require('./randomizer.js');
 var styleOptions = require('./style-options.js');
 
-/**
- *
- * Amount of Line Containers to produce
- *
- */
-
-/*
-var TOTAL_LINE_CONTAINERS = 11;
-var ODD_LINE_CONTAINERS = 4;
-var EVEN_LINE_CONTAINERS = 5;
-var ART_BOX_HEIGHT = 300;
-*/
 
 /**
  *
