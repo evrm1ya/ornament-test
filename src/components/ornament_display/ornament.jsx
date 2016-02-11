@@ -1,7 +1,7 @@
 
 var React = require('react');
 var LineContainer = require('./line-container.jsx');
-var StyleGenerator = require('./style-generator.js');
+var StyleGenerator = require('./ornament-one/style-generator.js');
 
 /**
  *
@@ -40,14 +40,13 @@ module.exports = React.createClass({
   },
   generateLineContainers: function() {
     var lineContainers = [];
-    var containerStyles = StyleGenerator.getContainerStylesList();
-    var innerLineStyles = StyleGenerator.getInnerLineStylesList();
-    for(var i = 0; i < TOTAL_LINE_CONTAINERS; i++) {
+    var stylesList = StyleGenerator.getStylesList(10, 5, 5, 300);
+    for(var i = 0; i < 10; i++) {
       lineContainers.push(
         <LineContainer
           key={'cont_' + (i+1)}
-          containerStyle={containerStyles[i]}
-          innerLineStyle={innerLineStyles[i]}
+          containerStyle={stylesList.containerStylesList[i]}
+          innerLineStyle={stylesList.innerLineStylesList[i]}
         />
       );
     }
