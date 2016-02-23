@@ -2,6 +2,7 @@
 var React = require('react');
 var LineContainer = require('./line-container.jsx');
 var StyleGenerator = require('./ornament-one/style-generator.js');
+var Snowflake = require('./ornament-one/snowflake.js');
 
 /**
  *
@@ -39,9 +40,12 @@ module.exports = React.createClass({
     this.setState({click: click});
   },
   generateLineContainers: function() {
+    var snowflake = new Snowflake(5, 3, 2, 200);
+    console.log(snowflake.styleGenerator);
+    console.log(snowflake.styleGenerator());
     var lineContainers = [];
-    var stylesList = StyleGenerator.getStylesList(10, 5, 5, 300);
-    for(var i = 0; i < 10; i++) {
+    var stylesList = snowflake.styleGenerator().getStylesList();
+    for(var i = 0; i < 9; i++) {
       lineContainers.push(
         <LineContainer
           key={'cont_' + (i+1)}
